@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "filter": "multileiturasCadastro_filterMail",
+        "id": "multileiturasCadastro_editMail",
+        "name": "mail",
+        "required": true,
+        "target": "details.mail"
+    },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Email"
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+<template if:true={book}>
+    <p>Nome: {book.text.title.Value}</p>
+
+        <h2 class="header">Disponibilidade</h2>
+    <ul class="list-vertical">
+    <li if:true={book.format_ink}>Temos este livro em tinta. Consulte a disponibilidade para empréstimo em nossa Biblioteca física.</li>
+    <li if:true={book.format_braille}>Temos este livro em braille, em {book.details.braille} volumes. Consulte a disponibilidade para empréstimo em nossa biblioteca física.</li>
+    <li if:true={_showProtectedMessage_}>Este livro está protegido por direitos autorais. Você precisa estar conectado para ter acesso a seu conteúdo.</li>
+    <li if:true={_showUnverifiedMessage_}>Este livro está protegido por direitos autorais. <ecl-link url={_urlPerfil_}>Vá até a página do seu perfil para saber como ter acesso a todo o conteúdo da biblioteca.</ecl-link></li>
+    <li if:true={_showAdultMessage_}>Este livro possui conteúdo adulto. Somente leitores cadastrados com mais de 18 anos podem ter acesso a seu conteúdo.</li>
+    <li if:true={_readerEnabled_}><ecl-link url={_urlReader_}>Leia o livro on-line</ecl-link></li>
+    <li if:true={_downloadEnabled_}><ecl-link url={_urlDownload_}>Baixe o livro para ler no seu aplicativo favorito.</ecl-link></li>
+    <li if:true={_audiobookEnabled_}><ecl-link url={_urlAudiobook_}>Ouça a narração.</ecl-link></li>
+    </ul>
+
+        <template if:true={_showFavoriteButton_}>
+<h2 class="header">Eu e o livro</h2>
+<ecl-button onclick={actionFavorite}>{_buttonFavoriteLabel_}</ecl-button>
+    </template>
+    
+    <h2 class="header">Publicação</h2>
+    <p if:true={book.text.original}>Do original: {book.text.original.Value}</p>
+    <p>Autor: <ecl-link url={_urlAuthor_} label={book.text.author} /></p>
+    <p if:true={book.text.translator}>Traduzido por: {book.text.translator.Value}</p>
+    <p if:true={book.text.publisher}>Publicado por: {book.text.publisher.Value}</p>
+    <p if:true={book.details.year}>Ano da publicação: {book.details.year}</p>
+    <p if:true={book.details.pages}>Número de páginas: {book.details.pages}</p>
+    <p if:true={book.details.language}>Idioma: {book.details.language}</p>
+    <p if:true={book.collection_name}>Série: <ecl-link url={_urlCollection_}>{book.text.collection.pt.value}</ecl-link><span if:true={book.details.index}> - {book.details.index}</span></p>
+    <p>Gênero: <ecl-link url={_urlGenre_} label={book.text.genre.Value} /></p>
+        <p if:true={book.text.notes}>Observações: {book.text.notes.Value}</p>
+
+        <h2 class="header">Sinopse</h2>
+    <ecl-text content={book.text.synopsis} />
+
+    <p if:true={book.text.keywords}>
+        Palavras-chave:
+        <template for:each={_keywords_} for:item={keyword}>
+            {keyword.separator}
+            <ecl-link url={keyword.url} label={keyword.label} />
+        </template>
+    </p>
+
+    <template if:true={_readers_}>
+        <h2 class="header">Visitas recentes</h2>
+        <div for:each={_readers_} for:item={reader}>
+            {reader.separator}
+            <ecl-link url={reader.url}>{reader.title}</ecl-link>
+        </div>
+    </template>
+</template>

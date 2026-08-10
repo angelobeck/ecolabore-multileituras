@@ -1,0 +1,11 @@
+{
+    "children": [
+        "~editMail",
+        "~editPhone",
+        "~editDocument"
+    ],
+    "actions": [
+        "~actionPrevious",
+        "~actionNext"
+    ]
+}

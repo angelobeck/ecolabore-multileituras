@@ -1,0 +1,18 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Leitura on-line"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Permite ler o livro"
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasLivro_reader",
+        "endpoint": "multileiturasLivro_reader"
+    }
+}

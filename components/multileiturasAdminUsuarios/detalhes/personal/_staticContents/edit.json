@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "component": "form"
+    },
+    "children": [
+        "~editIdentifier",
+        "~editUserName",
+        "~editMail",
+        "~editPhone",
+        "~editDocument",
+"~editAccess"
+    ],
+    "actions": [
+        "~actionSave"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "children": [
+        "~editUserNick"
+    ],
+    "actions": [
+        "~actionPrevious",
+        "~actionNext"
+    ]
+}

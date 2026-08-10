@@ -1,0 +1,18 @@
+<template if:true={isConnected}>
+    <p>Olá {User.title.Value}</p>
+    <p if:true={_continueReading_}>Continue de onde parou:</p>
+    <p if:true={_continueReading_}><ecl-link url={_continueReadingUrl_} label={_continueReadingLabel_} /></p>
+        <p><ecl-link url={profile_url}>{Label.multileituras_modUser_profile.Value}</ecl-link></p>
+
+    <div style="display: flex; align-items: center; justify-content: flex-end;">
+    <ecl-button onclick={handleLogout}>Desconectar</ecl-button>
+    </div>
+</template>
+
+<template if:false={isConnected}>
+    <p>Se você já é cadastrado, basta 
+    <ecl-link url={login_url}>conectar</ecl-link>
+    </p>
+    <p>Seja membro da Biblioteca Virtual da ACIC você também!</p>
+        <p><ecl-link url={subscribe_url}>Quero cadastrar-me agora</ecl-link></p>
+</template>

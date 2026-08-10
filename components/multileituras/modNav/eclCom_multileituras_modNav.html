@@ -1,0 +1,27 @@
+<nav>
+  <ul for:each={_children_} for:item={item} >
+    <li
+      aria-current={item.current}
+      aria-disabled={item.disabled}
+      data-url={item.url}
+      onclick={handleClick}
+      onkeydown={handleKeydown}
+      role={item.role}
+      tabindex="0"
+    >
+      <div>
+        <ecl-icon svg={item.details.icon} />
+        <div>{item.label.Value}</div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<cut target="menu" name="menu"}>
+    <div>
+        <h1 class="header" tabindex="0" wire:element={headerElement}>Menu</h1>
+        <com name="userContext" />
+        <hr />
+        <ecl-button onclick={menuClose}>Fechar</ecl-button>
+    </div>
+</cut>

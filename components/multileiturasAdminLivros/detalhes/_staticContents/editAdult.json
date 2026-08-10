@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "filter": "filter_checkbox",
+        "name": "adult",
+        "target": "adult",
+        "trueValue": 1,
+        "falseValue": 0
+            },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Conteúdo adulto"
+            }
+        }
+    }
+}

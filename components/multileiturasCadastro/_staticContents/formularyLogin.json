@@ -1,0 +1,10 @@
+{
+    "children": [
+        "~editIdentifier",
+        "~editPassword"
+    ],
+    "actions": [
+        "~actionPrevious",
+        "~actionNext"
+    ]
+}

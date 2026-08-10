@@ -1,0 +1,15 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Sua sessão expirou"
+            },
+            "en": {
+                "value": "Invalid session"
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasLogin_invalidSession"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "filter": "filter_checkbox",
+        "name": "public",
+        "target": "public",
+        "trueValue": 1,
+        "falseValue": 0
+            },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Domínio público"
+            }
+        }
+    }
+}

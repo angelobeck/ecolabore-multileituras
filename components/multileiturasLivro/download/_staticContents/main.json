@@ -1,0 +1,18 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Download"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Permite baixar os arquivos digitais"
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasLivro_download",
+        "endpoint": "multileiturasLivro_download"
+    }
+}

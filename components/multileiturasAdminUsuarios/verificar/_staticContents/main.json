@@ -1,0 +1,18 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Aprovar documento"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Aprova ou reprova um documento submetido pelo usuário."
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasAdminUsuarios_verificar",
+        "endpoint": "multileiturasAdminUsuarios_verificar"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Livros"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Gerencia os livros da biblioteca"
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasAdminLivros",
+        "endpoint": "multileiturasAdminLivros",
+        "modList_show": true
+    }
+}

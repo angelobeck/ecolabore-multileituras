@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Adicionados recentemente"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Lista os títulos acrescentados recentemente à biblioteca"
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasLivros_recentes",
+        "endpoint": "multileiturasLivros_recentes"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Narradores"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Lista todos os narradores"
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasLivros_narradores",
+        "endpoint": "multileiturasLivros_narradores"
+    }
+}

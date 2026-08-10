@@ -1,0 +1,10 @@
+{
+    "children": [
+        "~editUserName",
+        "~editBornDate",
+        "~editCountry"
+    ],
+    "actions": [
+        "~actionNext"
+    ]
+}

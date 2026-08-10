@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Remover registro"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Remove o registro do livro e os arquivos digitais correspondentes."
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasAdminLivros_detalhes_remover",
+        "endpoint": "multileiturasAdminLivros_detalhes_remover"
+    }
+}

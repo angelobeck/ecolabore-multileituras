@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Todos os narradores"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Lista todos os gêneros"
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasAdminLivros_generosTodos",
+        "endpoint": "multileiturasAdminLivros_generosTodos"
+    }
+}

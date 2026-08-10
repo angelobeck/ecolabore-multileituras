@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Mensageria"
+            }
+        },
+        "label": {
+            "pt": {
+                "value": "Mensageria"
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasAdminAvisos_mensageria",
+        "endpoint": "multileiturasAdminAvisos_mensageria"
+    }
+}

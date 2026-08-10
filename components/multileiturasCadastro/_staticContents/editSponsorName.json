@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "filter": "filter_string",
+        "name": "sponsor_name",
+        "id": "multileiturasCadastro_editSponsorName",
+        "required": true,
+        "target": "text.sponsor.pt.value"
+    },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Nome completo"
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "children": [
+        "~editTitle",
+        "~editAuthor",
+        "~editOriginal",
+        "~editTranslator",
+        "~editPress",
+        "~editYear",
+        "~editLanguage",
+        "~editGenre",
+        "~editCollection",
+        "~editIndex",
+        "~editSynopsis",
+        "~editKeywords",
+        "~editAdult",
+        "~editPages",
+        "~editInk",
+        "~editBraille",
+        "~editAudio",
+        "~editDuration",
+        "~editNarrator",
+        "~editPlatform",
+        "~editPublic",
+        "~editNotes"
+    ],
+    "actions": [
+        "~actionSave"
+    ]
+}

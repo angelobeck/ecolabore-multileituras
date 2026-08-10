@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "filter": "multileiturasCadastro_filterNick",
+        "id": "multileiturasCadastro_editUserNick",
+        "name": "user_nick",
+        "required": true,
+        "target": "text.nick.pt.value"
+    },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Nome ou apelido"
+            }
+        }
+    }
+}

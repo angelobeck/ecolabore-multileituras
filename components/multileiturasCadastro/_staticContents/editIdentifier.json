@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "filter": "multileiturasCadastro_filterIdentifier",
+        "id": "multileiturasCadastro_editIdentifier",
+        "name": "identifier",
+        "required": true,
+        "target": "identifier"
+    },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Identificador"
+            }
+        }
+    }
+}

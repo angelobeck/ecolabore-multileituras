@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Domínio Público"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Lista todos os títulos em domínio público"
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasLivros_dominioPublico",
+        "endpoint": "multileiturasLivros_dominioPublico"
+    }
+}

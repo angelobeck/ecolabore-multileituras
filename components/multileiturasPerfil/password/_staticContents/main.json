@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Redefinir senha"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Permite redefinir a senha do usuário."
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasPerfil_password",
+        "endpoint": "multileiturasPerfil_password",
+        "modList_show": true
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "filter": "multileiturasCadastro_filterDocument",
+        "id": "multileiturasCadastro_editDocument",
+        "name": "document",
+        "required": true,
+        "target": "details.document"
+    },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Número do documento"
+            }
+        }
+    }
+}

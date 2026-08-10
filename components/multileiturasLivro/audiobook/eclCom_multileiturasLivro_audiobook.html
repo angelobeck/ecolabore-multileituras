@@ -1,0 +1,60 @@
+<template if:true={url}>
+
+    <div class="player-controls-container">
+        <button aria-label={_playPauseLabel_} class="player-big-button" onclick={actionPlayPause} onkeydown={handleRangeKeydown}>
+            <ecl-icon svg={_playPauseSvg_} />
+        </button>
+    </div>
+
+    <div class="player-controls-container">
+        <button class="player-small-button" aria-label="Voltar 10 minutos" onclick={actionSeekHome}>
+            <ecl-icon svg="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M 8 0 a 8 8 0 0 1 0 16 a 8 8 0 0 1 0 -16 v 1 a 7 7 0 0 0 0 14 a 7 7 0 0 0 0 -14 z M 13 5 l -4 3 l 4 3 z M 9 5 l -4 3 l 4 3 z M 3 5 h 2 v 6 h -2 z '/></svg>" />
+        </button>
+        <button class="player-small-button" aria-label="Voltar 1 minuto" onclick={actionSeekPageUp}>
+            <ecl-icon svg="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M 8 0 a 8 8 0 0 1 0 16 a 8 8 0 0 1 0 -16 v 1 a 7 7 0 0 0 0 14 a 7 7 0 0 0 0 -14 z M 13 5 l -5 3 l 5 3 z M 8 5 l -5 3 l 5 3 z'/></svg>" />
+        </button>
+        <button class="player-small-button" aria-label="Avançar 1 minuto" onclick={actionSeekPageDown}>
+            <ecl-icon svg="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M 8 0 a 8 8 0 0 1 0 16 a 8 8 0 0 1 0 -16 v 1 a 7 7 0 0 0 0 14 a 7 7 0 0 0 0 -14 z M 3 5 l 5 3 l -5 3 z M 8 5 l 5 3 l -5 3 z'/></svg>" />
+        </button>
+        <button class="player-small-button" aria-label="Avançar 10 minutos" onclick={actionSeekEnd}>
+            <ecl-icon svg="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M 8 0 a 8 8 0 0 1 0 16 a 8 8 0 0 1 0 -16 v 1 a 7 7 0 0 0 0 14 a 7 7 0 0 0 0 -14 z M 3 5 l 4 3 l -4 3 z M 7 5 l 4 3 l -4 3 z M 11 5 h 2 v 6 h -2 z'/></svg>" />
+        </button>
+    </div>
+
+    <div>
+        <input class="player-range" aria-valuetext={_currentTime_} type="range" min="0" max="100" step="1" value={_rangeValue_} onkeydown={handleRangeKeydown} />
+    </div>
+
+    <ecl-accordion label="Mais controles de reprodução">
+        <ul class="list-vertical">
+            <li><ecl-button label="Reduzir volume" onclick={actionVolumeDown} /></li>
+            <li><ecl-button label="Aumentar volume" onclick={actionVolumeUp} /></li>
+            <li><ecl-button label="Reduzir velocidade de reprodução" onclick={actionRateSlow} /></li>
+            <li><ecl-button label="Aumentar velocidade de reprodução" onclick={actionRateFast} /></li>
+            <li><ecl-button label="Voltar ao início" onclick={actionSeekCtrlHome} /></li>
+            <li><ecl-button label="Voltar 10 minutos: Home" onclick={actionSeekHome} /></li>
+            <li><ecl-button label="Voltar 1 minuto: PageUp" onclick={actionSeekPageUp} /></li>
+            <li><ecl-button label="Voltar 10 segundos: Seta esquerda" onclick={actionSeekArrowLeft} /></li>
+            <li><ecl-button label="Avançar 10 segundos: Seta direita" onclick={actionSeekArrowRight} /></li>
+            <li><ecl-button label="Avançar 1 minuto: PageDown" onclick={actionSeekPageDown} /></li>
+            <li><ecl-button label="Avançar 10 minutos: End" onclick={actionSeekEnd} /></li>
+            <li><ecl-button label="Avançar quase até o fim" onclick={actionSeekCtrlEnd} /></li>
+        </ul>
+    </ecl-accordion>
+
+    <p>Título: {book.text.title.Value}</p>
+    <p>Autor: {book.text.author.Value}</p>
+    <p if:true={book.text.narrator}>Narrador: <ecl-link url={_urlNarrator_}>{book.text.narrator.Value}</ecl-link></p>
+    <p>Plataforma: {book.details.platform}</p>
+    <p>Duração total: {_duration_}</p>
+    <p>Posição atual: {_currentTime_}</p>
+    <p>Velocidade de reprodução: <span aria-live="polite">{rate}x</span></p>
+    <p>Volume: <span aria-live="polite">{volume}%</span></p>
+
+</template>
+
+<template if:true={errorMessage}>
+    <p>{errorMessage.text.content.Value}</p>
+
+    <com name="user" />
+</template>

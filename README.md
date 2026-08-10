@@ -1,2 +1,4 @@
 # ecolabore-multileituras
-A biblioteca virtual da ACIC
+
+A Biblioteca Virtual da ACIC.
+

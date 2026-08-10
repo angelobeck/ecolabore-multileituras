@@ -1,0 +1,21 @@
+<h1 wire:element={headerElement} class="header" tabindex="0">{_headerContent_}</h1>
+<p aria-live="polite">{_step_}</p>
+{raw}
+<div if:true={step} if:compare="1">
+    <ecl-formulary name="multileiturasCadastro_formularyStart" fields={fields} onaction={formularyAction} />
+</div> 
+
+<div if:true={step} if:compare="2">
+    <p if:true={fields.minor}>Porque {fields.text.title.Value} não completou 14 anos ainda, precisamos que os campos a seguir sejam preenchidos com os dados de uma pessoa responsável.</p>
+    <ecl-formulary name={_formularyName_} fields={fields} onaction={formularyAction} />
+</div>
+
+<div if:true={step} if:compare="3">
+    <ecl-formulary name="multileiturasCadastro_formularyPublic" fields={fields} onaction={formularyAction} />
+</div>
+
+<div if:true={step} if:compare="4">
+    <ecl-formulary name="multileiturasCadastro_formularyLogin" fields={fields} onaction={formularyAction} />
+</div> 
+
+<ecl-modal message={error.message} context={error.context} name="alert" />

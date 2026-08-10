@@ -1,0 +1,12 @@
+{
+    "children": [
+        "~editSponsorName",
+        "~editMail",
+        "~editPhone",
+        "~editDocument"
+    ],
+    "actions": [
+        "~actionPrevious",
+        "~actionNext"
+    ]
+}

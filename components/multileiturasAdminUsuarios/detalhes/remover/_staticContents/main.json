@@ -1,0 +1,19 @@
+    {
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Remover registro"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Remove o registro do usuário e os arquivos digitais correspondentes."
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasAdminUsuarios_detalhes_remover",
+        "endpoint": "multileiturasAdminUsuarios_detalhes_remover"
+    }
+}

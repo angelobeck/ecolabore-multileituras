@@ -1,0 +1,49 @@
+<template if:true={userContent}>
+    <p>Nome: {userContent.text.title.Value}</p>
+    <p>Data de nascimento: {userContent.details.bornDate}</p>
+    <p>País: {userContent.details.country}</p>
+    <p if:true={user.kid}>Responsável: {userContent.text.sponsor.Value}</p>
+    <p>Email: {userContent.details.mail}</p>
+    <p>Telefone: {userContent.details.phone}</p>
+    
+    <h2 class="header">Documentação</h2>
+<p if:false={user.verified}>Não há documentos para {userContent.text.title.Value}</p>
+    <p if:true={user.verified} if:compare="1">{userContent.text.title.Value} está aguardando a aprovação do seu documento.</p>
+    <p if:true={user.verified} if:compare="2">O documento de {userContent.text.title.Value} foi rejeitado. Solicitamos o renvio.</p>
+    <p if:true={user.verified} if:compare="4">O documento de {userContent.text.title.Value} foi verificado.</p>
+
+    <div if:true={extension} if:compare="jpg">
+        <a href={_urlDocument_} target="_blank">
+            <img style="width:100%; height:auto" src={_urlDocument_}
+                alt="Visualização do documento - clique para abrir em uma nova janela." />
+        </a>
+    </div>
+
+    <div if:true={extension} if:compare="pdf">
+        <a href={_urlDocument_} target="_blank">Visualizar documento PDF em uma nova janela</a>
+    </div>
+
+    <div if:false={extension}>
+        <ecl-file-upload title="Enviar documento" onloadend={update} onerror={update} />
+    </div>
+
+    <div if:true={extension}>
+        <ecl-file-upload title="Substituir documento" onloadend={update} onerror={update} />
+        <ecl-button label="Remover documento" onclick={action} value="removedocument" />
+        <ecl-button if:true={user.verified} if:compare="1" label="Aprovar documento" onclick={action} value="accept" />
+        <ecl-button if:true={user.verified} if:compare="1" label="Rejeitar documento" onclick={action} value="reject" />
+    </div>
+
+    <h1 class="header">Status</h1>
+
+    <div if:true={user.blocked}>
+        <p>Usuário bloqueado</p>
+        <ecl-button label="Desbloquear usuário" onclick={action} value="unblock" />
+    </div>
+
+    <div if:false={user.blocked}>
+        <p>Usuário não bloqueado</p>
+        <ecl-button label="Bloquear usuário" onclick={action} value="block" />
+    </div>
+
+</template>

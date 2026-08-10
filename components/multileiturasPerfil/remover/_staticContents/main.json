@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Descadastrar-me da Biblioteca"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Remove o registro do usuário do banco de dados"
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasPerfil_remover",
+        "endpoint": "multileiturasPerfil_remover"
+    }
+}

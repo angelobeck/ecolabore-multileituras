@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Redefinir senha"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Permite redefinir a senha do usuário."
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasAdminUsuarios_detalhes_password",
+        "endpoint": "multileiturasAdminUsuarios_detalhes_password",
+        "modList_show": true
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Status e documentação"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Bloqueia, desbloqueia, aceita ou rejeita os documentos do usuário."
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasAdminUsuarios_detalhes_status",
+        "endpoint": "multileiturasAdminUsuarios_detalhes_status",
+        "modList_show": true
+    }
+}

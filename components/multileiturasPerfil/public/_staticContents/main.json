@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Editar perfil"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Permite a edição do perfil público."
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasPerfil_public",
+        "endpoint": "multileiturasPerfil_public",
+        "modList_show": true
+    }
+}

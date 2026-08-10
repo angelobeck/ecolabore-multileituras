@@ -1,0 +1,61 @@
+<template if:true={step} if:compare="identifier">
+    <h1 class="header">{Application.title.Value}</h1>
+    <label class="field">
+        <p>Informe seu CPF, telefone ou email</p>
+        <div>
+            <input autocomplete="username" class="field_text_input" type="text" wire:element={identifierElement} onkeydown={handleIdentifierKeydown} />
+        </div>
+    </label>
+    <ecl-button onclick={handleIdentifierAction}>
+        Próxima
+    </ecl-button>
+    <div style="margin-top: 1rem">
+        <ecl-link url={levelUpUrl} >
+            Voltar para {levelUpTitle.Value}
+        </ecl-link>
+    </div>
+</template>
+
+<template if:true={step} if:compare="password">
+    <h1 class="header">{Application.title.Value}</h1>
+    <label class="field">
+        <p>Senha</p>
+        <div>
+            <input autocomplete="current-password" class="field_text_input" type={passwordType} wire:element={passwordElement} readonly={passwordReadonly}
+                onkeydown={handlePasswordKeydown} />
+        </div>
+    </label>
+    <div>
+        <label class="field">
+            <input type="checkbox" onclick={handlePasswordVisibility} disabled={passwordReadonly} />
+            Exibir senha
+        </label>
+    </div>
+    <ecl-button onclick={handlePasswordAction} aria-disabled={passwordReadonly}>
+        Conectar
+    </ecl-button>
+    <div>
+        <ecl-link url={levelUpUrl}>
+            Voltar para {levelUpTitle.Value}
+        </ecl-link>
+    </div>
+</template>
+
+<template if:true={step} if:compare="welcome">
+    <h1 class="header" wire:element={welcomeElement} tabindex="0">Olá!</h1>
+    <p>Você está conectado à ACIC.</p>
+    <ecl-button onclick={handleWelcomeAction}>
+        Ok
+    </ecl-button>
+</template>
+
+<template if:true={step} if:compare="error">
+    <h1 class="header" wire:element={errorElement} tabindex="0">Ooops!</h1>
+    <p>{errorMessage}</p>
+    <ecl-button onclick={handleErrorRetry}>
+        Tentar novamente
+    </ecl-button>
+    <ecl-button class="general_button" onclick={handleErrorCancel}>
+        Cancelar
+    </ecl-button>
+</template>

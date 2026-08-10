@@ -1,0 +1,17 @@
+{
+    "flags": {
+        "filter": "filter_radio",
+        "id": "multileiturasCadastro_editGender"
+    },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Forma de tratamento"
+            }
+        }
+    },
+    "children": [
+        "~editGenderMale",
+        "~editGenderFemale"
+    ]
+}

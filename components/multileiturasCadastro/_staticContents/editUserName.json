@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "filter": "multileiturasCadastro_filterFullName",
+        "name": "user_name",
+        "id": "multileiturasCadastro_editUserName",
+        "required": true,
+        "target": "text.title.pt.value"
+    },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Nome completo"
+            }
+        }
+    }
+}

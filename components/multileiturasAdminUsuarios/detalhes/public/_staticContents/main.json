@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Perfil público"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Permite a edição do perfil público."
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasAdminUsuarios_detalhes_public",
+        "endpoint": "multileiturasAdminUsuarios_detalhes_public",
+        "modList_show": true
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Autores"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Lista todos os autores"
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasLivros_autores",
+        "endpoint": "multileiturasLivros_autores"
+    }
+}

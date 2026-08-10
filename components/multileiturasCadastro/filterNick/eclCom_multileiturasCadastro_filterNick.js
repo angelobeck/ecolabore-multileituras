@@ -1,0 +1,42 @@
+
+class eclCom_multileiturasCadastro_filterNick extends eclCom {
+    control;
+    formulary;
+    value = '';
+
+    connectedCallback() {
+        this.api('formulary');
+        this.api('control');
+    }
+
+    refreshCallback() {
+        if (!this.formulary)
+            return;
+
+        if (!this.control.flags || !this.control.flags.target)
+            return;
+
+        this.value = this.formulary.getField(this.control.flags.target);
+
+        if (!this.value || this.value === '') {
+            this.value = this.formulary.getField('text.title.pt.value');
+            this.formulary.setField(this.control.flags.target, this.value);
+        }
+
+    }
+
+    disconnectedCallback() {
+        if (!this.formulary)
+            return;
+
+        this.formulary.unsubscribe(this);
+    }
+
+    handleChange(event) {
+        if (!this.formulary || !this.control.flags || !this.control.flags.target)
+            return;
+
+        this.formulary.setField(this.control.flags.target, event.detail.value);
+    }
+
+}

@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Livros em áudio"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Lista todos os títulos disponíveis em áudio"
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasLivros_audiobooks",
+        "endpoint": "multileiturasLivros_audiobooks"
+    }
+}

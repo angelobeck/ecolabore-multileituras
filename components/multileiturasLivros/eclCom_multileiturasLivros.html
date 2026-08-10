@@ -1,0 +1,28 @@
+<label class="field">
+    Sua pesquisa
+    <input type="text" class="field_text_input" wire:element={filterKeywords} onkeydown={handleInputKeydown}
+        value={keywords} />
+</label>
+
+<label class="field">
+    Formato
+    <select for:each={_options_} for:item={option} onchange={handleSelectChange}>
+        <option value={option.value} selected={option.selected}>{option.label}</option>
+    </select>
+</label>
+
+<ecl-button onclick={handleButtonClick} onkeydown={handleButtonKeydown}>
+    Pesquisar
+</ecl-button>
+
+<h2 class="header">Resultados da pesquisa</h2>
+
+<p aria-live="polite">{status}</p>
+
+<ul class="list-vertical" for:each={_children_} for:item={child}>
+    <li>
+        <ecl-link url={child.url}>{child.title.Value} - {child.author.Value}</ecl-link>
+    </li>
+</ul>
+
+<h2 class="header">Explorar a biblioteca</h2>

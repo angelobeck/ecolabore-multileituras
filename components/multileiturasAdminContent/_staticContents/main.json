@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Conteúdos"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Gerencia as páginas de conteúdos"
+            }
+        }
+    },
+    "flags": {
+        "component": "multileiturasAdminContent",
+        "endpoint": "multileiturasAdminContent",
+        "modList_show": true
+    }
+}

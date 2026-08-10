@@ -1,0 +1,19 @@
+<label>
+    Sua pesquisa
+    <input class="field_text_input" type="text" style="width:100%" wire:element={filterKeywords} onkeydown={handleInputKeydown} />
+</label>
+<button class="general_button" onclick={handleButtonClick} onkeydown={handleButtonKeydown}>
+    Pesquisar
+</button>
+
+<h2>Resultados da pesquisa</h2>
+
+<p aria-live="polite">{status}</p>
+
+<ul class="list-vertical" for:each={_children_} for:item={child}>
+    <li>
+        <ecl-link url={child.url}>{child.title.Value}</ecl-link>
+    </li>
+</ul>
+
+<h2>Administração dos usuários</h2>

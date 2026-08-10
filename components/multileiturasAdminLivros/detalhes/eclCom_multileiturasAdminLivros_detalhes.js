@@ -1,0 +1,91 @@
+
+class eclCom_multileiturasAdminLivros_detalhes extends eclCom {
+    book = '';
+    files = [];
+    paragraphs = [];
+    nameMonitor = '';
+
+    connectedCallback() {
+        this.track('book');
+    }
+
+    refreshCallback() {
+        if (this.nameMonitor !== page.application.name) {
+            this.nameMonitor = page.application.name;
+            this.update();
+        }
+    }
+
+    update() {
+        io.request()
+            .then(response => {
+                this.book = response.book;
+                this.files = response.files;
+                this.paragraphs = page.selectLanguage(this.book.text.synopsis).value.split("\n");
+            })
+            .catch(error => {
+                this.book = error;
+            });
+    }
+
+    get _urlAuthor_() {
+        return page.url([page.domain.name, 'admin', 'livros', '-autores', this.book.author_name]);
+    }
+
+    get _urlNarrator_() {
+        return page.url([page.domain.name, 'admin', 'livros', '-narradores', this.book.narrator_name]);
+    }
+
+    get _urlGenre_() {
+        return page.url([page.domain.name, 'admin', 'livros', '-generos', this.book.genre_name]);
+    }
+
+    get _keywords_() {
+        var keywords = page.selectLanguage(this.book.text.keywords).value.split(',');
+        var keysList = [];
+        for (let i = 0; i < keywords.length; i++) {
+            let key = keywords[i];
+            key = key.trim();
+            if (key.substring(key.length - 1) === ',')
+                key = key.substring(0, key.length - 1);
+            if (key.length) {
+                let slug = eclIo_convert.slug(key).replace(/[_]/g, '+');
+                keysList.push({
+                    label: key,
+                    separator: keysList.length ? ', ' : '',
+                    url: page.url([page.domain.name, 'admin', 'livros'], true, '_keywords-' + slug)
+                })
+            }
+        }
+        return keysList;
+    }
+
+    get _files_() {
+        if (!Array.isArray(this.files))
+            return [];
+
+        return this.files.map(file => {
+            return {
+                name: file
+            };
+        });
+    }
+
+    actionLoadEnd() {
+        this.update();
+    }
+
+    actionRemoveFile(event) {
+        var fileName = event.detail.value;
+
+        io.request({
+            action: 'remove_file',
+            filename: fileName
+        })
+            .then(response => {
+                this.book = response.book;
+                this.files = response.files;
+                this.paragraphs = page.selectLanguage(this.book.text.synopsis).value.split("\n");
+            });
+    }
+}

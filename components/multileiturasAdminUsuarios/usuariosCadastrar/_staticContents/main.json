@@ -1,0 +1,19 @@
+{
+    "text": {
+        "title": {
+            "pt": {
+                "value": "Cadastrar usuário"
+            }
+        },
+        "description": {
+            "pt": {
+                "value": "Cadastra um novo usuário"
+            }
+        }
+    },
+    "flags": {
+        "modList_show": true,
+        "component": "multileiturasAdminUsuarios_usuariosCadastrar",
+        "endpoint": "multileiturasAdminUsuarios_usuariosCadastrar"
+    }
+}

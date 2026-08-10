@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "filter": "multileiturasCadastro_filterBornDate",
+        "id": "multileiturasCadastro_editBornDate",
+        "name": "bornDate",
+        "required": true,
+        "target": "details.bornDate"
+    },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Data de nascimento"
+            }
+        }
+    }
+}

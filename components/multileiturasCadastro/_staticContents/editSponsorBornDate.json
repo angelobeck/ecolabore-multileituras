@@ -1,0 +1,16 @@
+{
+    "flags": {
+        "filter": "filter_string",
+        "id": "multileiturasCadastro_editSponsorBornDate",
+        "name": "sponsor_born_date",
+        "required": true,
+        "target": "details.sponsorBornDate"
+    },
+    "text": {
+        "label": {
+            "pt": {
+                "value": "Data de nascimento"
+            }
+        }
+    }
+}

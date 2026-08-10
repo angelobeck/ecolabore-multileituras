@@ -1,0 +1,26 @@
+<template if:true={userContent}>
+    <h2 class="header">{userContent.text.title.Value}</h2>
+    <p if:true={userContent.text.description}>{userContent.text.description.Value}</p>
+    <div if:true={userContent.text.content} for:each={_paragraphs_} for:item={paragraph}>
+        <p>{paragraph}</p>
+    </div>
+
+    <template if:true={_favoritesEnabled_}>
+        <h2 class="header">Favoritos de {userContent.text.title.Value}</h2>
+        <ul class="list-vertical" for:each={_favorites_} for:item={favorite}>
+            <li>
+                <ecl-link url={favorite.url}>{favorite.title}</ecl-link>
+            </li>
+        </ul>
+    </template>
+
+        <template if:true={_recentsEnabled_}>
+        <h2 class="header">Visitas recentes</h2>
+        <ul class="list-vertical" for:each={_recents_} for:item={recent}>
+            <li>
+                <ecl-link url={recent.url}>{recent.title}</ecl-link>
+            </li>
+        </ul>
+    </template>
+
+    </template>
