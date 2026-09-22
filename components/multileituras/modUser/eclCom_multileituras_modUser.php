@@ -13,8 +13,8 @@ class eclCom_multileituras_modUser extends eclCom
         $page = $this->page;
         if (isset($page->session['user']['name'])) {
             $this->isConnected = true;
-$this->profile_url = $page->url([$page->domain->name, 'estante', 'perfil']);
-$this->logout_url = $page->url(true, true, '_logout');
+            $this->profile_url = $page->url([$page->domain->name, 'estante', 'perfil']);
+            $this->logout_url = $page->url(true, true, '_logout');
         } else {
             $this->login_url = $page->url([...$page->application->path, '-login']);
             $this->subscribe_url = $page->url([$page->domain->name, 'cadastrar']);

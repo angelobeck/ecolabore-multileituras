@@ -29,7 +29,11 @@ class eclCom_multileituras_modUser extends eclCom {
         page.sessionRemove();
         root.reset();
         init();
-    }
+        io.request(false, 'main_logout')
+        .then(() => {
+            navigate(page.url([]));
+        });
+            }
 
     get _continueReading_() {
         if (!this.continueReadingChecked) {

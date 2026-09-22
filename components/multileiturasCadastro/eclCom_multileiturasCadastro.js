@@ -61,7 +61,8 @@ class eclCom_multileiturasCadastro extends eclCom {
                 fields: this.fields
             };
             io.request(data)
-                .then(response => {
+                .then((response, raw) => {
+                    this.raw = raw;
                     if (this.step === 5 && response.user) {
                         page.session.user = response.user;
                         page.sessionUpdate();

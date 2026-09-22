@@ -3,8 +3,9 @@
 class eclApp_multileiturasLivro_downloadFile extends eclApp
 {
     public static $name = '-default';
+    public static $access = 1;
 
-    public static function dispatch(eclEngine_page $page): void
+    public static function view_main(eclEngine_page $page): void
     {
         $folder = $page->application->parent->parent->name;
         $file = $page->application->name;
