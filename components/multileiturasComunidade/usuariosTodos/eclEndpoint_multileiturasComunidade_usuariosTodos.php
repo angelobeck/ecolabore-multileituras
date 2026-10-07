@@ -10,19 +10,21 @@ class eclEndpoint_multileiturasComunidade_usuariosTodos extends eclEndpoint
         $where = ['blocked' => 0];
         $users = $io->database->select($store->user, $where);
         $activeUsers = [];
-        foreach($users as $row) {
-            $activeUsers[$row['id']] = true;
+        foreach ($users as $row) {
+            $activeUsers[$row['id']] = $row['name'];
         }
 
         $where = ['name' => '-public'];
-            $rows = $io->database->select($store->userContent, $where);
+        $rows = $io->database->select($store->userContent, $where);
 
-            $children = [];
-            foreach($rows as $row) {
-                if(isset($activeUsers[$row['user_id']]))
-                    $children[] = $row;
+        $children = [];
+        foreach ($rows as $row) {
+            if (isset($activeUsers[$row['user_id']])) {
+                $row['name'] = $activeUsers[$row['user_id']];
+                $children[] = $row;
             }
-            return $this->response(['children' => $children]);
+        }
+        return $this->response(['children' => $children]);
     }
 
 }

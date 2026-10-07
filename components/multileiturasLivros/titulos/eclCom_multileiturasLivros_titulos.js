@@ -19,6 +19,7 @@ class eclCom_multileiturasLivros_titulos extends eclCom {
             let child = this.response[i];
 
             children.push({
+                name: child.name,
                 title: child.text.title,
                 author: child.text.author || {},
                 url: page.url([...basePath, child.name])
