@@ -41,8 +41,8 @@ class eclCom_multileiturasLivro_reader extends eclCom {
         return !!this.retrieveMarkers();
     }
 
-    get _markerHideButton_() {
-        return !!this.marker;
+    get _markerButtonDisabled_() {
+        return this.marker == 0;
     }
 
     handleContextmenu(event) {

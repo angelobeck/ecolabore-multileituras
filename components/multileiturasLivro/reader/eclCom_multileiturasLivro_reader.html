@@ -7,7 +7,7 @@
 <p>Para inserir um marcador em tela de toque, dê um duplo toque no parágrafo a marcar.</p>
 </div>
 <p aria-live="polite">{_currentParagraph_}</p>
-<ecl-button if:false={_markerHideButton_} label="Ir para meu marcador" onclick={actionGotoMarker} />
+<ecl-button aria-disabled={_markerButtonDisabled_} label="Ir para meu marcador" onclick={actionGotoMarker} />
 
 
 <div for:each={_paragraphs_} for:item={paragraph} wire:element={paragraphs}>
