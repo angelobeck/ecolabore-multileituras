@@ -1,0 +1,11 @@
+# Configuracao local e segredos (issue #1)
+config.php
+multileituras_config.php
+*.pem
+*.key
+.env
+
+# Dados e logs locais
+database/
+*_log.txt
+log.txt
