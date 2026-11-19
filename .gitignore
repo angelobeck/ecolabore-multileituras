@@ -9,3 +9,6 @@ multileituras_config.php
 database/
 *_log.txt
 log.txt
+docs/
+migrar_usuario.php
+config.example.php
