@@ -1,6 +1,1 @@
-<ul class="list-vertical" for:each={_children_} for:item={child}>
-    <li>
-        <ecl-link url={child.url}>{child.title.Value}</ecl-link>
-        <div>{child.description.Value}</div>
-    </li>
-</ul>
+<ecl-alphabet-list items={_children_} single="leitor" multiple="leitores" />

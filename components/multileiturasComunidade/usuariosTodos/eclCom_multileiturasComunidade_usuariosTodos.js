@@ -19,6 +19,7 @@ class eclCom_multileiturasComunidade_usuariosTodos extends eclCom {
             let child = this.response[i];
 
             children.push({
+                name: child.name,
                 title: child.text.title,
                 description: child.text.description || {},
                 url: page.url([...basePath, child.user_id])

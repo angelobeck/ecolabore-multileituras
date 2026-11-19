@@ -20,6 +20,7 @@ class eclCom_multileiturasLivros_audiobooks extends eclCom {
 
             children.push({
                 title: child.text.title,
+                name: child.name,
                 author: child.text.author || {},
                 url: page.url([...basePath, child.name])
             });

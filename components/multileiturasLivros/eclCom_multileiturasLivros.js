@@ -70,6 +70,25 @@ class eclCom_multileiturasLivros extends eclCom {
             this.handleButtonClick();
     }
 
+    handleClearClick() {
+        localStorage.removeItem('multileiturasLivros_search');
+
+        this.children = [];
+        this.keywords = "";
+        this.format = '';
+        this.status = 'A pesquisa foi limpa.';
+        this.filterKeywords.value = "";
+        this.filterKeywords.focus();
+        this.filterFormat.selectedIndex = 0;
+    }
+
+    handleClearKeyDown(event) {
+        if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
+            return;
+        if (event.key == 'Enter' || event.key == " ")
+            this.handleClearClick();
+    }
+
     handleInputKeydown(event) {
         if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
             return;
